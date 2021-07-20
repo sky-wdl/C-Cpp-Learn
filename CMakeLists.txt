@@ -3,4 +3,4 @@ project(C_Learn C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(C_Learn main.c)
+add_executable(C_Learn 3.1_main.c)
