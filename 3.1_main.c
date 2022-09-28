@@ -8,3 +8,7 @@ int main() {
     printf("The corresponding degree Celsius is: %f\n",c);
     return 0;
 }
+/*
+ * author:dongliu wen
+ * 9/23/2022
+ */
