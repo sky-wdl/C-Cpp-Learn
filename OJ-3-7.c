@@ -1,9 +1,8 @@
 //
-// Created by Dongliu_Wen on 2022/10/11.
+// Created by Dongliu_Wen on 2022/10/12.
 //
 /*
- * 工资
-【问题描述】
+ * 【问题描述】
 假设税前工资和税率如下（s代表税前工资，t代表税率）：
 s<1000    t=0%
 1000<=s<2000      t=10%
@@ -24,12 +23,47 @@ s<1000    t=0%
 【样例说明】
 税前工资为3000，所以税率为20％，扣除税后工资为2400.00
  */
-
 #include <stdio.h>
 
-int main(void)
-{
+int main() {
+	int n = 0;
+	float money = 0;
+	scanf("%f", &money);
+	if (money >= 4000) {
+		n = 25;
+	} else if (money >= 3000 && money < 4000) {
+		n = 20;
+	} else if (money >= 2000 && money < 3000) {
+		n = 15;
+	} else if (money >= 1000 && money < 2000) {
+		n = 10;
+	} else if (money < 1000) {
+		n = 0;
+	}
 
+	switch (n)
+	case (25): {
+	{
+		printf("%.2f", money * 0.75);
+		break;
+	}
+	case (20): {
+		printf("%.2f", money * 0.8);
+		break;
+	}
+	case (15): {
+		printf("%.2f", money * 0.85);
+		break;
+	}
+	case (10): {
+		printf("%.2f", money * 0.90);
+		break;
+	}
+	case (0): {
+		printf("%.2f", money);
+		break;
+	}
+	}
 
-    return 0;
+	return 0;
 }

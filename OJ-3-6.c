@@ -1,5 +1,5 @@
 //
-// Created by Dongliu_Wen on 2022/10/11.
+// Created by Dongliu_Wen on 2022/10/12.
 //
 /*
  * 奇数序列2
@@ -24,12 +24,30 @@
 【样例说明】
 
 输入的整数为4，其立方为64，构成64的连续奇数序列共有3个，分别是"1 3 5 7 9 11 13 15"、"13 15 17 19"和"31 33"，第一个最长，其第一个奇数为1，长度为8，所以输出：1 8
+
+
  */
-
 #include <stdio.h>
+#include <math.h>
 
-int main(void)
-{
+int main() {
+	int n = 0, n3 = 0;
+	scanf("%d", &n);
+	n3 = pow(n, 3);
 
-    return 0;
+	for (int i = 1; i < n3; i += 2) {
+		for (int j = i,num=0,count=0; j < n3; j += 2) {
+			num += j;
+			if (num > n3)
+				break;
+			else
+				count++;
+			if (num == n3) {
+				printf("%d %d", i, count);
+				return 0;
+			}
+		}
+	}
+
+	return 0;
 }

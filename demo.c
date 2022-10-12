@@ -2,11 +2,9 @@
 // Created by Dongliu_Wen on 2022/9/28.
 //
 #include <stdio.h>
-
-int main()
+int main(int argc, char *argv[])
 {
-    int count, num;
-    double score,
+    printf("%d",1%5);
 
     return 0;
 }
