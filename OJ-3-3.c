@@ -24,13 +24,13 @@
 void count_n(float n,float m)
 {
     float num=0,num_n=n;
-    for (int i = 1; i < m; ++i)
+    for (int i = 1; i < (int)m; ++i)
     {
-        n=n*(0.25);
-        num=num+n*2.0;
+        n=n/4;
+        num=num+n*2;
     }
 
-    printf("%.2f\n%.2f",num+num_n,n*0.25);
+    printf("%.2f\n%.2f",num+num_n,n/4);
 }
 
 int main(void)
