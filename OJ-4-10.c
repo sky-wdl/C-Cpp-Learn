@@ -5,7 +5,7 @@
      * 10. 完全数
     【问题描述】
 
-    一个整数，如果其所有小于它本身的因子（包括1）之和正好等于该数，则称其为"完全数"。编写程序计算某一范围内的所有"完全数"。
+    一个整数，如果其所有小于它本身的因子（包括1）之和正好等于该数，则称其为"完全数"。编写程序计算某一个范围内的所有"完全数"。
 
     【输入形式】
 
@@ -35,15 +35,15 @@
 
     在100到200之间，因为没有完全数，所以输出No Answer。
      */
-    #include <stdio.h>
+#include <stdio.h>
 
-    int main()
-    {
-        int num_1,num_2;
-        int sum;
+int main()
+{
+    int num_1,num_2;
+    int sum;
         int i,j;
         int state=0;
-        scanf("%d %d",&num_1,&num_2);
+        scanf("%d%d",&num_1,&num_2);
 
         for (i = num_1; i <= num_2; ++i)
         {
