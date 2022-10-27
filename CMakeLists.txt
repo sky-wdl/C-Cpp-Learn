@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.19)
 project(C_Learn C)
 
 set(CMAKE_C_STANDARD 11)
+project(demo LANGUAGES C CXX) #CMake Error: Cannot determine link language for target 如果这里不添加C 的话会报这个错误
 
 add_executable(3.1main 3.1_main.c)
 add_executable(3.2main 3.2_main.c)
@@ -46,3 +47,4 @@ add_executable(OJ-5-1 OJ-5-1.c)
 add_executable(OJ-5-2 OJ-5-2.c)
 add_executable(OJ-5-3 OJ-5-3.c)
 add_executable(OJ-5-7 OJ-5-7.c)
+add_executable(cpp-HomeWork-9 cpp-HomeWork-9.cpp)
