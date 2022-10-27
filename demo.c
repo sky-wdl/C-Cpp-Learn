@@ -1,10 +1,10 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <math.h>
 
 int main()
 {
-    char a;
-    a=getchar();
-    putchar(a);
+    int a=3;
+    printf("%f",sqrt(3));
 
     return 0;
 }
