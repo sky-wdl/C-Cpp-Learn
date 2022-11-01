@@ -1,4 +1,0 @@
-﻿  test.cpp
-D:\projeck\cpp\vsc\开发环境搭建及调试\Hello_Word\test.cpp(14,22): warning C4129: “>”: 不可识别的字符转义序列
-D:\projeck\cpp\vsc\开发环境搭建及调试\Hello_Word\test.cpp(18,22): warning C4129: “<”: 不可识别的字符转义序列
-  Hello_Word.vcxproj -> D:\projeck\cpp\vsc\开发环境搭建及调试\Debug\Hello_Word.exe
