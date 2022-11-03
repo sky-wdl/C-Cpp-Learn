@@ -60,3 +60,5 @@ add_executable(OJ-6-3 C-Chapter-six/OJ-6-3.c)
 add_executable(OJ-6-4 C-Chapter-six/OJ-6-4.c)
 add_executable(OJ-6-5 C-Chapter-six/OJ-6-5.c)
 add_executable(OJ-6-6 C-Chapter-six/OJ-6-6.c)
+add_executable(cpp-HomeWork-10 "cpp-Homework-10/cpp-Homework-10.cpp")
+
