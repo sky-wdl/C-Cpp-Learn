@@ -1,41 +1,33 @@
-//#include <stdio.h>
-//void inverp(char *a)
-//{
-//    if (*a=='\0')
-//        return;
-//    inverp(a+1);
-//    printf("%c",*a);
-//}
-//int main(void)
-//{
-//    char s[10] = "hello!";
-//    inverp(s);
-//
-//    return 0;
-//}
 #include <stdio.h>
 
-void a(int m);
-int main(void)
+int fn(int a,int n);
+int main()
 {
-    int m=120;
-    a(m);
+    int a,n;
+    scanf("%d%d",&a,&n);
+    int x;
+    x=fn(a,n);
+    printf("sum=%d",x);
 
     return 0;
 }
 
-void a(int m)
+int fn(int a,int n)
 {
-    int k=2;
-    while(k <= m)
+    int x,sum=0;
+    for(x=0;x<n-1;x++)
     {
-        if(m%k==0)
+        if(x!=0)
         {
-            printf("%d, ",k);
-            m=m/k;
+            a=a*10+a;
+            sum+=a;
         }
         else
-            k++;
-
+        {
+            sum=a;
+        }
     }
+
+    return sum;
 }
+
