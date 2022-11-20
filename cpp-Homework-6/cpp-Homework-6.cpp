@@ -1,5 +1,6 @@
 ﻿// 1、设计一个Circle类，有数据成员radius（半径）、成员函数area()，计算圆的面积。构造一个Circle对象进行测试。
 #include <iostream>
+#include <math.h>
 using namespace std;
 
 const double PI = 3.14;
