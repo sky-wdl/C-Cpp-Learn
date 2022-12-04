@@ -35,8 +35,8 @@ int main(void)
 
     /*
      * 初始化计数数组的元素均为0
-     * arrayNumber代表所有数字出现的次数目前为0
-     * arrayCount用于储存用户输入的数据
+     * arrayNumber代表所有数字出现的次数，目前将其初始化为0
+     * arrayCount用于储存用户输入的几组数据，以数组的形式储存不同的几组数据。
      */
     int arrayNumber[10]={0};
     int arrayCount[count];
@@ -69,20 +69,25 @@ int main(void)
 
 
     /*
-     * 初始化max,使其等于数字0的出现次数，并从数字0开始，依次进行数字出现次数的比较
+     * 从数字0开始，依次进行数字出现次数的比较
      * 取出极大值
      */
     max = 0;
-    for (int i = 0; i < 9; ++i)
+    sign = arrayNumber[0];
+    for (int i = 1; i < 10; ++i)
     {
-        if(arrayNumber[i] < arrayNumber[i+1])
+        if(max < arrayNumber[i])
         {
-            max = i+1;
-            sign = arrayNumber[i+1];
+            max = i;
+            sign = arrayNumber[i];
         }
     }
 
 
+    /*
+     * 将最大值输出
+     * 同时进行判断是否有与出现次数最大值相等的数字，如有则将其输出
+     */
     printf("%d ",max);
     for (int i = 0; i < 10; ++i)
     {
