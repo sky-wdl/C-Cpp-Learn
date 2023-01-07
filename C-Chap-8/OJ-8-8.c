@@ -34,22 +34,50 @@ n m
 
 
 /*
- * 此题未完成，待解决
+ * 已解决，思路是用数据进行标记各序号目前是否退出，如退出，对应序号的数组元素其值置0进行标记
+ * 一共需要退出n-1个数字，循环n-1次
+ * 最后遍历数组，将非0元素打印出来即可
  */
 #include <stdio.h>
 
 int main(void)
 {
-    int n, m, number;
+    int n, m;
     scanf("%d%d",&n, &m);
-    number = m;
-
-    while(n > number)
+    int number[n];
+    for (int i = 0; i < n; ++i)
     {
-        number *= 2;
+        number[i] = i + 1;
     }
 
-    printf("%d ",number);
+    int count = 0;
+    for (int i = 0; i < n - 1; ++i)
+    {
+        int sign = 0;
+        while (sign != m)
+        {
+            if(count == n)
+                count = 0;
+            else if (count > n)
+            {
+                count -= n;
+                count--;
+            }
+
+            if(number[count] != '\0')
+            {
+                sign++;
+            }
+            count++;
+        }
+        number[count - 1] = '\0';
+    }
+
+    for (int i = 0; i < n; ++i)
+    {
+        if(number[i] != '\0')
+            printf("%d", number[i]);
+    }
 
     return 0;
 }
