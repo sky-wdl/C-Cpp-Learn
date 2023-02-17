@@ -17,7 +17,7 @@ struct student
 struct student studentInformation[30];
 
 void display();                         //显示所有学生信息
-void search(int num);         //查找特定学生的信息
+void search(int num);                   //查找特定学生的信息
 void input();                           //批量导入
 void sort();                            //排序
 void setGrade();                        //设置等级
